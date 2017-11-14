@@ -15,19 +15,19 @@ public class ExtendedEntityTest {
 
 	@Test
 	public void testGetAttributesList() {
-		// on instancie la classe à tester
+		// on instancie la classe Ã  tester
 		ExtendedEntity extEntity = new ExtendedEntity();
 		
 		RelationCollisionUtil relationUtil = new RelationCollisionUtil();
 		
-		// on crée et configure une classe Entity (=TABLE)
+		// on crÃ©e et configure une classe Entity (=TABLE)
 		Entity entity = new Entity();
 		EntityConfig entityConfig = new EntityConfig();
 		entityConfig.setEntityName("test");
 		entity.setEntityConfig(entityConfig);
 		System.out.println(entity.getCollisionUtil());
 		
-		// on crée et configure une classe Attribute (=COLONNE)
+		// on crÃ©e et configure une classe Attribute (=COLONNE)
 		Attribute attribute = new Attribute();
 		ColumnConfig columnConfig = new ColumnConfig();
 		columnConfig.setType(JdbcType.VARCHAR);

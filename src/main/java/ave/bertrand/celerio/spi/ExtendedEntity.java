@@ -44,7 +44,7 @@ public class ExtendedEntity implements EntitySpi {
 	 * Returns a list (comma separated) of all entity's simple attributes + FK
 	 * attributes
 	 * 
-	 * @return
+	 * @return String the list
 	 */
 	public String getAttributesList() {
 		StringBuffer buffer = new StringBuffer();
@@ -76,7 +76,7 @@ public class ExtendedEntity implements EntitySpi {
 	/**
 	 * Returns a list (comma separated + curly bracket) of all attributes of the entity's key or the default one {id}.
 	 * sample (str1): {keyPart1},{keyPart2}
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListWithCommaAndCurlyBracket() {
 		StringBuffer buffer = new StringBuffer();
@@ -105,7 +105,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str2): {keyPart1: $stateParams.keyPart1, keyPart2: $stateParams.keyPart2, ...}
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListJsonStyleStateParams() {
 		StringBuffer buffer = new StringBuffer();
@@ -137,7 +137,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str3): @PathVariable String keyPart1, @PathVariable String keyPart2
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListRestStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -161,7 +161,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str4): keyPart1, keyPart2
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListConstructorStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -185,7 +185,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str5.1): String keyPart1, String keyPart2
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListJavaStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -209,7 +209,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str5.2): String attribute1, String attribute2, ...
-	 * @return
+	 * @return the computed string
 	 */
 	public String getAttributesListJavaStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -246,7 +246,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str7): {{item.id.keyPart1}}:{{item.id.keyPart2}}
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListAngularJsStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -270,7 +270,7 @@ public class ExtendedEntity implements EntitySpi {
 	
 	/**
 	 * sample (str8): {keyPart1: item.id.keyPart1, keyPart2: item.id.keyPart2, ...}
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListJsonStyleItemId() {
 		StringBuffer buffer = new StringBuffer();
@@ -300,7 +300,7 @@ public class ExtendedEntity implements EntitySpi {
 	/**
 	 * Returns a list (JSon style) of all entity's attributes.
 	 * Sample (str9): { "attrib1": true, "attrib2": true, ...}
-	 * @return
+	 * @return the computed string
 	 */
 	public String getAttributesListJsonStyle() {
 		StringBuffer buffer = new StringBuffer();
@@ -331,7 +331,7 @@ public class ExtendedEntity implements EntitySpi {
 	/**
 	 * Returns a list of all entity's attributes as a SQL comma separated list.
 	 * Sample (str10): databaseColumn1, databaseColumn2, ...
-	 * @return
+	 * @return the computed string
 	 */
 	public String getAttributesListAsSqlColumn() {
 		StringBuffer buffer = new StringBuffer();
@@ -355,7 +355,7 @@ public class ExtendedEntity implements EntitySpi {
 	/**
 	 * Returns an entity key list for an AngularJs URL.
 	 * Sample: :id (for a single key)	or 	:keyPart1,:keyPart2 (for a composite key)
-	 * @return
+	 * @return the computed string
 	 */
 	public String getCpkAttributesListForAngularUrl() {
 		StringBuffer buffer = new StringBuffer();
