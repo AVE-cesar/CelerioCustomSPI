@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>com.github.AVE-cesar</groupId>
 	<artifactId>CelerioCustomSPI</artifactId>
 	<version>1.0.0</version>
@@ -66,16 +66,24 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.0.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.4</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!-- use mvn source:jar to generate a jar containing the sources of this project -->
+			<!-- use mvn source:jar to generate a jar containing the sources of this 
+				project -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -89,7 +97,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- use mvn javadoc:jar to generate a jar containing the javadoc of this project -->
+			<!-- use mvn javadoc:jar to generate a jar containing the javadoc of this 
+				project -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -103,7 +112,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- use mvn gpg:sign -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
