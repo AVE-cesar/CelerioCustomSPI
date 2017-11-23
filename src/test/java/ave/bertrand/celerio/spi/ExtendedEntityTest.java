@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -17,6 +18,8 @@ import com.jaxio.celerio.factory.RelationCollisionUtil;
 import com.jaxio.celerio.model.Attribute;
 import com.jaxio.celerio.model.Entity;
 
+import junit.framework.Assert;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= {BeanA.class})
 public class ExtendedEntityTest {
@@ -27,6 +30,10 @@ public class ExtendedEntityTest {
     @Autowired
     private ApplicationContext applicationContext;
     
+    @Test
+    public void testContext() {
+        Assert.assertNotNull(applicationContext.getBean(Entity.class));
+    }
     
 	@Test
 	public void testGetAttributesList() {
