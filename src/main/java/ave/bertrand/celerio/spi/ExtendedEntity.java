@@ -381,4 +381,24 @@ public class ExtendedEntity implements EntitySpi {
 		
 		return buffer.toString();
 	}	
+	
+	/**
+	 * Returns the first attribute name that is not part of the primary key.
+	 *  
+	 * @return the attribute name
+	 */
+	public String getFirstNoneKeyAttribute() {
+		StringBuffer buffer = new StringBuffer();
+		
+		for (int i = 0; i < entity.getAttributes().getList().size(); i++) {
+			Attribute attribute = entity.getAttributes().getList().get(i);
+			
+			if (!attribute.isInCpk() && !attribute.isInPk()) {
+				buffer.append(attribute.getName());
+				break;
+			}
+		}
+		
+		return buffer.toString();
+	}
 }
